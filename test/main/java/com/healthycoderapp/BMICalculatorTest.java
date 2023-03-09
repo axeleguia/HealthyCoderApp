@@ -24,7 +24,7 @@ class BMICalculatorTest {
         System.out.println("After all unit test.");
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "weight={0}, height={1}")
     @CsvSource(value = {"89.0, 1.72", "95.0, 1.75", "110.0, 1.78"})
     void should_ReturnTrue_When_DietRecommended(Double coderWeight, Double coderHeight) {
         //arrange
